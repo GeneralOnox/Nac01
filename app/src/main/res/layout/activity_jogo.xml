@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aulasemcasa.nac01.JogoActivity"
+
+    android:id="@+id/activity_jogo"
+
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+
+    android:background="@color/background_splash">
+
+    <LinearLayout
+        android:id= "@+id/llCabecalho"
+        android:layout_width= "match_parent"
+        android:layout_height= "wrap_content"
+        android:orientation= "vertical"
+        android:padding= "16dp" >
+
+        <ImageView
+            android:layout_width= "match_parent"
+            android:layout_height= "90dp"
+            android:src= "@drawable/hyrulecrest" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/llDados"
+
+        android:layout_below="@+id/llCabecalho"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/ivPersonagem"
+
+            />
+        <TextView
+            android:id="@+id/tvNome"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tvFichas"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id= "@+id/llContainer"
+        android:layout_width= "match_parent"
+        android:layout_height= "wrap_content"
+        android:layout_above= "@+id/llRodape"
+        android:layout_below= "@+id/llDados"
+        android:layout_margin= "16dp"
+        android:gravity= "center"
+        android:orientation= "horizontal" >
+        <ImageView
+            android:id= "@+id/ivSlot1"
+            style= "@style/icon_slot"
+            android:src= "@drawable/courage_icon" />
+        <ImageView
+            android:id= "@+id/ivSlot2"
+            style= "@style/icon_slot"
+            android:layout_marginLeft= "15dp"
+            android:layout_marginRight= "15dp"
+            android:src= "@drawable/power_icon" />
+        <ImageView
+            android:id= "@+id/ivSlot3"
+            style= "@style/icon_slot"
+            android:src= "@drawable/wisdom_icon" />
+    </LinearLayout >
+    <LinearLayout
+        android:id= "@+id/llRodape"
+        android:layout_width= "match_parent"
+        android:layout_height= "wrap_content"
+        android:layout_alignParentBottom= "true"
+        android:layout_marginLeft= "16dp"
+        android:layout_marginRight= "16dp" >
+
+        <info.hoang8f.widget.FButton
+            android:layout_width= "match_parent"
+            android:layout_height= "wrap_content"
+            app:buttonColor= "#f1c40f"
+            app:cornerRadius= "5dp"
+            app:shadowColor= "#e67e22"
+            app:shadowEnabled= "true"
+            app:shadowHeight= "5dp"
+            android:text= "JOGAR"
+            android:textColor= "#FFF"
+            android:onClick= "jogar"
+            android:textStyle= "bold"
+
+            android:id="@+id/btJogar"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

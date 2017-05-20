@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aulasemcasa.nac01.PerfilActivity"
+
+    android:id="@+id/activity_perfil"
+
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+
+    android:background="@color/background_splash"
+    >
+
+    <include layout="@layout/footer_menu_principal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/footer"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/ivPersonagem"
+
+
+            />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgSexo"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/ivPersonagem"
+            >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+
+                    android:checked="false"
+
+                    android:onClick="escolherSexo"
+
+                    android:text="Masculino"
+                    android:id="@+id/rbMasculino"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+
+                    android:checked="false"
+
+                    android:onClick="escolherSexo"
+
+                    android:text="Feminino"
+                    android:id="@+id/rbFeminino"
+                    />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_below="@+id/rgSexo"
+
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu nome aqui!"/>
+
+        <Spinner
+            android:layout_below="@+id/etNome"
+
+            android:id="@+id/spnFichas"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:entries="@array/quantidade_fichas"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:layout_below="@+id/spnFichas"
+
+            android:id="@+id/btIniciarJogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jogar!"
+
+            android:onClick="jogar"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

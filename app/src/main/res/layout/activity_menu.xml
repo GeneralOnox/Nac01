@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.aulasemcasa.nac01.MenuActivity"
+
+    android:id="@+id/activity_menu"
+
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+
+    android:background="@color/background_splash"
+    >
+
+    <include layout="@layout/header_menu_principal"/>
+    <include layout="@layout/footer_menu_principal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/ivLogo"
+
+            android:background="@drawable/hyrulecrest"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btPerfil"
+            android:layout_below="@+id/ivLogo"
+            android:onClick="perfil"
+            android:text="Jogar!"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btSair"
+            android:layout_below="@+id/btPerfil"
+            android:onClick="sobre"
+            android:text="Sobre"/>
+    </RelativeLayout>
+
+</RelativeLayout>
